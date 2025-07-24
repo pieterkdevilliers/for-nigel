@@ -1,0 +1,33 @@
+@font-face {
+	font-family: 'Poppins'; /* This is the name you'll use in Tailwind's config */
+	font-style: normal;
+	font-weight: 400; /* Corresponds to 'Regular' */
+	font-display: swap; /* Tells the browser to show a fallback font while this loads */
+	src: url('/assets/fonts/Poppins-Regular.woff2') format('woff2'); /* Path to the font file */
+}
+
+@font-face {
+	font-family: 'Poppins';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/assets/fonts/Poppins-Italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 700; /* Corresponds to 'Bold' */
+	font-display: swap;
+	src: url('/assets/fonts/Poppins-Bold.woff2') format('woff2');
+}
+
+body {
+	font-family: 'Poppins', sans-serif; /* Fallback to sans-serif if Poppins fails to load */
+}
+.text-red {
+	color: #d2102f;
+}
+.text-blue {
+	color: #0e71b8;
+}
