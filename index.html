@@ -8,13 +8,27 @@
 		<title>Tailwind CLI Project</title>
 	</head>
 	<body>
-		<h1 class="text-light-blue font-bold">Light Blue Text</h1>
-		<h1 class="text-blue text-3xl font-bold">Blue Text</h1>
-		<h1 class="text-red text-3xl font-bold">Red Text</h1>
-		<div class="banner bg-gradient">
-			<div class="banner__content">
-				<p>Banner Text</p>
+		<section class="container--full banner__background">
+			<div class="banner">
+				<div class="banner__content">
+					<h1>Title/Headline</h1>
+				</div>
 			</div>
+		</section>
+		<section class="date-message flex justify-between items-center">
+			<p>Date</p>
+			<p>For Nigel Message</p>
+		</section>
+		<section class="video__container flex justify-center items-center">
+			<video src="/assets/videos/sample-video.mp4" controls></video>
+		</section>
+		<section class="cta__container flex justify-center items-center">
+			<h2>CTA/My Contact Details</h2>
+		</section>
+		<div class="container">
+			<h1 class="text-light-blue font-bold">Light Blue Text</h1>
+			<h1 class="text-blue text-3xl font-bold">Blue Text</h1>
+			<h1 class="text-red text-3xl font-bold">Red Text</h1>
 		</div>
 	</body>
 </html>
