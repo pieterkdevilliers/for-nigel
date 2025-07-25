@@ -47,11 +47,11 @@ body {
 .text-3xl {
 	font-size: 1.875rem; /* 30px */
 }
-.container {
+/* section:not(.container--full) {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 1rem;
-}
+	padding: 1.5rem 0;
+} */
 .container--full {
 	width: 100%;
 	padding: 0;
@@ -97,8 +97,10 @@ body {
 	padding: 0;
 }
 .video__container video {
-	max-width: 100%;
+	border-radius: 10px;
+	margin-block: 1rem;
 	margin-inline: auto;
+	max-width: 100%;
 }
 
 @media (min-width: 48rem) {
@@ -110,6 +112,6 @@ body {
 }
 @media (min-width: 64rem) {
 	video {
-		width: 720px;
+		width: 800px;
 	}
 }
