@@ -26,6 +26,8 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 18px;
 	color: #333;
+	margin: 0;
+	padding: 0;
 }
 .text-red {
 	color: #d2102f;
@@ -70,23 +72,39 @@ body {
 	background-image: url('/assets/images/banner.webp');
 }
 .banner {
-	min-height: 20rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-block: 2rem;
 }
 .banner__content {
 	text-align: center;
 	color: white;
-	font-size: 3rem;
+	font-size: 2rem;
 	font-weight: 900;
 	word-break: break-all;
 }
+.banner__content h1 {
+	margin: 0;
+}
 .date-message {
+	text-align: center;
+}
+.date-message p {
+	padding-inline: 1rem;
+	font-size: 140%;
 }
 .video__container video {
 	max-width: 100%;
 	margin-inline: auto;
+}
+
+@media (min-width: 48rem) {
+	.date-message {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 }
 @media (min-width: 64rem) {
 	video {
