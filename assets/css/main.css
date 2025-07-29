@@ -23,6 +23,14 @@
 
 @font-face {
 	font-family: 'Poppins';
+	font-style: medium;
+	font-weight: 500;
+	font-display: swap;
+	src: url('/assets/fonts/Poppins-Medium.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: 700;
 	font-display: swap;
@@ -83,6 +91,8 @@ body {
 .banner__background {
 	background-image: url('/assets/images/banner.webp');
 	background-position-x: -6rem;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .banner {
 	border-bottom: 2px solid #272e6d;
@@ -100,13 +110,22 @@ body {
 	word-break: break-all;
 }
 .banner__content h1 {
-	font-size: 5rem;
+	font-size: 3rem;
 	margin: 0;
+	line-height: 1.2;
+}
+.banner__content h1 span:last-child {
+	display: block;
 }
 .banner__content h2 {
-	font-size: 3rem;
-	font-weight: 300;
+	font-size: 1.8rem;
+	font-weight: 400;
 	margin-top: 0.5rem;
+	padding-inline: 1rem;
+	line-height: 1.2;
+}
+.banner__content h2 span:nth-child(3) {
+	display: block;
 }
 .date-message {
 	padding: 1.5rem;
@@ -120,23 +139,22 @@ body {
 .video-section {
 	background: linear-gradient(180deg, #b6ffee, #ebfffb, #ffffff);
 	position: relative;
+	padding-inline: 1rem;
 }
 .video__container {
 	background: #fff;
 	border: 2px solid #272e6d;
-	border-radius: 20px;
+	border-radius: 10px;
 	margin-inline: auto;
 	position: relative;
 	top: -3rem;
-	padding-inline: 2rem;
-	padding-block: 1rem;
+	padding: 0.25rem;
 	display: flex;
 	width: fit-content;
 	max-width: 1200px;
 }
 .video__container video {
 	border-radius: 10px;
-	margin-block: 1rem;
 	margin-inline: auto;
 	max-width: 100%;
 }
@@ -202,7 +220,84 @@ body {
 	color: #272e6d;
 }
 
+@media (min-width: 40rem) {
+	.banner__content h1 {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 1rem;
+	}
+	.banner__content h2 {
+		line-height: normal;
+	}
+	.video__container {
+		border-radius: 10px;
+		padding-inline: 1rem;
+		padding-block: 1rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.banner {
+		min-height: 10rem;
+	}
+	.banner__content h1 {
+		font-size: 2.5rem;
+	}
+	.banner__content h2 {
+		font-size: 1.5rem;
+	}
+	.video__container {
+		top: -2.5rem;
+	}
+	.cta__container {
+		top: -1rem;
+	}
+}
+
+@media (max-width: 568px) and (orientation: landscape) {
+	.banner {
+		min-height: 10rem;
+	}
+	.banner__content {
+		width: 100%;
+		max-width: 100%;
+	}
+	.banner__content :is(h1, h2) {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+	.button__container {
+		flex-direction: row;
+		width: 90%;
+	}
+}
+
 @media (min-width: 48rem) {
+	.banner {
+		min-height: 12rem;
+	}
+	.banner__content h1 {
+		font-size: 4rem;
+		line-height: 1.2;
+	}
+
+	.banner__content h2 {
+		font-size: 2.8rem;
+	}
+	.banner__content h2 span:nth-child(3) {
+		display: inline;
+	}
+	.video__container {
+		border-radius: 10px;
+		padding-inline: 1rem;
+		padding-block: 0rem;
+	}
+	.video__container video {
+		margin-block: 1rem;
+	}
 	.button__container {
 		flex-direction: row;
 		gap: 2rem;
@@ -212,6 +307,19 @@ body {
 	}
 }
 @media (min-width: 64rem) {
+	.banner {
+		min-height: 16rem;
+	}
+	.banner__content h1 {
+		font-size: 5rem;
+		line-height: normal;
+	}
+	.video__container {
+		border-radius: 20px;
+		padding-inline: 2rem;
+		padding-block: 1rem;
+		top: -3.6rem;
+	}
 	video {
 		width: 800px;
 	}
