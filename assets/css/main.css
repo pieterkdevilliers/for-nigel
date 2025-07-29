@@ -1,5 +1,12 @@
 @font-face {
 	font-family: 'Poppins'; /* This is the name you'll use in Tailwind's config */
+	font-style: light;
+	font-weight: 300; /* Corresponds to 'Light' */
+	font-display: swap; /* Tells the browser to show a fallback font while this loads */
+	src: url('/assets/fonts/Poppins-Light.woff2') format('woff2'); /* Path to the font file */
+}
+@font-face {
+	font-family: 'Poppins'; /* This is the name you'll use in Tailwind's config */
 	font-style: normal;
 	font-weight: 400; /* Corresponds to 'Regular' */
 	font-display: swap; /* Tells the browser to show a fallback font while this loads */
@@ -17,7 +24,7 @@
 @font-face {
 	font-family: 'Poppins';
 	font-style: normal;
-	font-weight: 700; /* Corresponds to 'Bold' */
+	font-weight: 700;
 	font-display: swap;
 	src: url('/assets/fonts/Poppins-Bold.woff2') format('woff2');
 }
@@ -26,6 +33,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 18px;
 	color: #333;
+	-webkit-font-smoothing: antialiased;
 	margin: 0;
 	padding: 0;
 	padding-block-end: 2rem;
@@ -74,12 +82,15 @@ body {
 }
 .banner__background {
 	background-image: url('/assets/images/banner.webp');
+	background-position-x: -6rem;
 }
 .banner {
+	border-bottom: 2px solid #272e6d;
 	display: flex;
-	align-items: center;
+	align-items: start;
 	justify-content: center;
 	padding-block: 2rem;
+	min-height: 16rem;
 }
 .banner__content {
 	text-align: center;
@@ -89,7 +100,13 @@ body {
 	word-break: break-all;
 }
 .banner__content h1 {
+	font-size: 5rem;
 	margin: 0;
+}
+.banner__content h2 {
+	font-size: 3rem;
+	font-weight: 300;
+	margin-top: 0.5rem;
 }
 .date-message {
 	padding: 1.5rem;
@@ -100,11 +117,32 @@ body {
 	margin: 0;
 	padding: 0;
 }
+.video-section {
+	background: linear-gradient(180deg, #b6ffee, #ebfffb, #ffffff);
+	position: relative;
+}
+.video__container {
+	background: #fff;
+	border: 2px solid #272e6d;
+	border-radius: 20px;
+	margin-inline: auto;
+	position: relative;
+	top: -3rem;
+	padding-inline: 2rem;
+	padding-block: 1rem;
+	display: flex;
+	width: fit-content;
+	max-width: 1200px;
+}
 .video__container video {
 	border-radius: 10px;
 	margin-block: 1rem;
 	margin-inline: auto;
 	max-width: 100%;
+}
+.cta__container {
+	position: relative;
+	top: -2rem;
 }
 .cta__container h2 {
 	font-size: 1.25rem;
@@ -117,15 +155,60 @@ body {
 	display: block;
 	margin-block-start: 0.25rem;
 }
+.button__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+.button__container .btn {
+	background-color: #d2102f;
+	border: 2px solid #fff;
+	border-radius: 2rem;
+	box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.25);
+	padding-block: 1rem;
+	padding-inline: 2rem;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 800;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+}
+.button__container .btn::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.25);
+	transition: all 0.2s ease;
+	opacity: 0;
+	border-radius: 2rem;
+}
+.button__container .btn:hover::after {
+	opacity: 1;
+	transition: all 0.2s ease;
+}
+.button__container .btn--secondary {
+	background-color: #fff;
+	border-color: #272e6d;
+	color: #272e6d;
+}
 
 @media (min-width: 48rem) {
-	.date-message {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	.button__container {
+		flex-direction: row;
+		gap: 2rem;
 	}
-	.cta__container h2 {
-		font-size: 1.8rem;
+	.button__container .btn {
+		min-width: 16rem;
 	}
 }
 @media (min-width: 64rem) {
