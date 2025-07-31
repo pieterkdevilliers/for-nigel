@@ -110,11 +110,11 @@ body {
 	word-break: break-all;
 }
 .banner__content h1 {
-	font-size: 3rem;
+	font-size: 2rem;
 	margin: 0;
 	line-height: 1.2;
 }
-.banner__content h1 span:last-child {
+.banner__content h1 span {
 	display: block;
 }
 .banner__content h2 {
@@ -222,10 +222,16 @@ body {
 
 @media (min-width: 40rem) {
 	.banner__content h1 {
-		display: flex;
+		/* display: flex; */
 		flex-direction: row;
 		justify-content: center;
 		gap: 1rem;
+	}
+	.banner__content h1 span {
+		display: inline;
+	}
+	.banner__content h1 span:last-child {
+		display: block;
 	}
 	.banner__content h2 {
 		line-height: normal;
@@ -264,10 +270,17 @@ body {
 		max-width: 100%;
 	}
 	.banner__content :is(h1, h2) {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		gap: 0.5rem;
+		display: inline;
+	}
+	.banner__content h1 {
+		font-size: 2.5rem;
+		line-height: 1.2;
+	}
+	.banner__content h1 span {
+		display: inline;
+	}
+	.banner__content h1 span:last-child {
+		display: block;
 	}
 	.button__container {
 		flex-direction: row;
@@ -283,9 +296,11 @@ body {
 		font-size: 4rem;
 		line-height: 1.2;
 	}
-
+	.banner__content h1 span:last-child {
+		display: block;
+	}
 	.banner__content h2 {
-		font-size: 2.8rem;
+		font-size: 2.6rem;
 	}
 	.banner__content h2 span:nth-child(3) {
 		display: inline;
@@ -309,6 +324,7 @@ body {
 		display: none;
 	}
 }
+
 @media (min-width: 64rem) {
 	.banner {
 		min-height: 16rem;
@@ -316,6 +332,10 @@ body {
 	.banner__content h1 {
 		font-size: 5rem;
 		line-height: normal;
+		padding-inline: 2rem;
+	}
+	.banner__content h1 span:last-child {
+		display: inline;
 	}
 	.video__container {
 		border-radius: 20px;
@@ -325,5 +345,15 @@ body {
 	}
 	video {
 		width: 800px;
+	}
+}
+@media (max-width: 810px) {
+	.banner__content h2 span:nth-child(3) {
+		display: block;
+	}
+}
+@media (max-width: 1200px) and (orientation: landscape) {
+	.banner__content h1 span:last-child {
+		display: block;
 	}
 }
