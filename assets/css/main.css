@@ -258,11 +258,6 @@ body {
 	margin-inline: auto;
 	margin-top: 2rem;
 }
-.video-section--2 .btn__container .btn {
-	/* display: block;
-	width: 100%;
-	max-width: 100%; */
-}
 .video-section--2 .btn--primary {
 	background-color: #fff;
 	color: #d2102f;
@@ -340,6 +335,9 @@ body {
 	.btn__container {
 		flex-direction: row;
 		width: 90%;
+	}
+	.video-section--2 .inner {
+		padding-inline: 1rem;
 	}
 }
 
