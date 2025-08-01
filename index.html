@@ -24,6 +24,7 @@
 		<section class="video-section">
 			<div class="video__container flex justify-center items-center">
 				<video
+					id="introVideo"
 					poster="/assets/images/NigelAI-thumb.webp"
 					src="/assets/videos/NigelAI.mp4"
 					controls
@@ -68,3 +69,27 @@
 		</section>
 	</body>
 </html>
+
+<script type="text/javascript">
+	// JavaScript to handle the visibility of the second video section
+	document.addEventListener("DOMContentLoaded", function () {
+		const videoSection2 = document.querySelector(".video-section--2");
+		if (videoSection2) {
+			videoSection2.classList.add("hide");
+		}
+		const introVideo = document.getElementById("introVideo");
+		const targetTimeStamp = 70; // 70 seconds
+		let timeStampReached = false;
+		introVideo.addEventListener('timeupdate', function () {
+			if (introVideo.currentTime >= targetTimeStamp && !timeStampReached) {
+				timeStampReached = true;
+					if (videoSection2) {
+						videoSection2.classList.remove("hide");
+						setTimeout(() => {
+							videoSection2.classList.add("reveal");
+						}, 1000);
+					}
+			}
+		});
+	});
+</script>
