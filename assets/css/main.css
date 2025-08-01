@@ -156,13 +156,15 @@ body {
 .video-section--2 {
 	background-color: #d2102f;
 	padding-block: 3rem;
+}
+#videoSection2 {
 	height: 0;
 	opacity: 0;
 }
-.video-section--2.hide {
+#videoSection2.hide {
 	display: none;
 }
-.video-section--2.reveal {
+#videoSection2.reveal {
 	height: auto;
 	opacity: 1;
 	transition: all 1s ease-in-out;
@@ -186,10 +188,12 @@ body {
 	max-width: 90%;
 }
 .video-section--2 .text-container h2 {
+	font-size: 3rem;
 	margin: 0;
 }
 .video-section--2 .text-container p {
-	font-size: 1.5rem;
+	font-size: 2rem;
+	font-weight: 500;
 	line-height: 1.5;
 	margin: 0;
 	padding: 0;
@@ -234,7 +238,7 @@ body {
 	padding-block: 1rem;
 	padding-inline: 2rem;
 	color: #fff;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	font-weight: 800;
 	text-align: center;
 	text-decoration: none;
@@ -345,7 +349,7 @@ body {
 	}
 	.btn__container {
 		flex-direction: row;
-		width: 90%;
+		width: 100%;
 	}
 }
 

@@ -31,25 +31,12 @@
 				></video>
 			</div>
 		</section>
-		<section
-			class="cta__container flex flex-col justify-center items-center"
-		>
-			<div class="btn__container">
-				<a class="btn btn--secondary" href="tel:+447368605848"
-					>Call Pieter</a
-				>
-				<a class="btn btn--primary" href="mailto:pieter@hey.com"
-					>Email Pieter</a
-				>
-			</div>
-		</section>
-		<section class="video-section--2">
-			<div class="inner">
+		<div id="videoSection2">
 
-				<div class="text-container">
-					<h2>YDAI Video Heading</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore perferendis modi vitae tenetur, nam dicta!</p>
-					<div class="btn__container">
+			<section
+				class="cta__container flex flex-col justify-center items-center"
+			>
+				<div class="btn__container">
 					<a class="btn btn--secondary" href="tel:+447368605848"
 						>Call Pieter</a
 					>
@@ -57,23 +44,39 @@
 						>Email Pieter</a
 					>
 				</div>
+			</section>
+			<section class="video-section--2">
+				<div class="inner">
+	
+					<div class="text-container">
+						<h2>YourDocsAI</h2>
+						<p>AI support for small businesses</p>
+						<div class="btn__container">
+						<a class="btn btn--secondary" href="tel:+447368605848"
+							>Call Pieter</a
+						>
+						<a class="btn btn--primary" href="mailto:pieter@hey.com"
+							>Email Pieter</a
+						>
+					</div>
+					</div>
+					<div class="video__container flex justify-center items-center">
+						<video
+							poster="/assets/images/YDAI-thumb.webp"
+							src="/assets/videos/YDAI.mp4"
+							controls
+						></video>
+					</div>
 				</div>
-				<div class="video__container flex justify-center items-center">
-					<video
-						poster="/assets/images/YDAI-thumb.webp"
-						src="/assets/videos/YDAI.mp4"
-						controls
-					></video>
-				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 	</body>
 </html>
 
 <script type="text/javascript">
 	// JavaScript to handle the visibility of the second video section
 	document.addEventListener("DOMContentLoaded", function () {
-		const videoSection2 = document.querySelector(".video-section--2");
+		const videoSection2 = document.querySelector("#videoSection2");
 		if (videoSection2) {
 			videoSection2.classList.add("hide");
 		}
