@@ -185,7 +185,6 @@ body {
 	justify-content: start;
 	align-items: start;
 	color: #fff;
-	max-width: 90%;
 }
 .video-section--2 .text-container h2 {
 	font-size: 3rem;
@@ -229,6 +228,10 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
+	width: 90%;
+}
+.video-section--2 .btn__container {
+	width: 100%;
 }
 .btn__container .btn {
 	background-color: #d2102f;
@@ -324,6 +327,14 @@ body {
 		max-width: 100%;
 		padding-inline: 1rem;
 	}
+	.btn__container {
+		width: 90%;
+		max-width: 90%;
+	}
+	.btn__container .btn {
+		max-width: 14rem;
+		padding-block: 0.75rem;
+	}
 }
 
 @media (max-width: 568px) and (orientation: landscape) {
@@ -344,12 +355,11 @@ body {
 	.banner__content h1 span {
 		display: inline;
 	}
-	.banner__content h1 span:last-child {
+	.banner__content :is(h1, h2) span:last-child {
 		display: block;
 	}
 	.btn__container {
 		flex-direction: row;
-		width: 100%;
 	}
 }
 
@@ -367,8 +377,8 @@ body {
 	.banner__content h2 {
 		font-size: 2.6rem;
 	}
-	.banner__content h2 span:nth-child(3) {
-		display: inline;
+	.banner__content h2 span:last-child {
+		display: block;
 	}
 	.video__container {
 		border-radius: 10px;
@@ -413,6 +423,9 @@ body {
 	}
 	video {
 		width: 800px;
+	}
+	.cta__container > .btn__container .btn {
+		max-width: 30rem;
 	}
 }
 @media (max-width: 810px) {
